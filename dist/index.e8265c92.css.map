@@ -1,0 +1,1 @@
+{"mappings":"AAQA","sources":["src/scss/style.scss"],"sourcesContent":["$base-background: #57855E;\n$base-yellow: #E5DDA5;\n$base-gray: #B6BBBF;\n$base-black: #171515;\n$base-white: #FFFF;\n\n\n\nbody{\n    background-color: $base-background;\n}\n"],"names":[],"version":3,"file":"index.e8265c92.css.map","sourceRoot":"/__parcel_source_root/"}

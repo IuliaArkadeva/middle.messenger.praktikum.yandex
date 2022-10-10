@@ -1,0 +1,1 @@
+{"mappings":"AAQA","sources":["src/pages/authorisation/authorisation.scss"],"sourcesContent":["$base-background: #57855E;\n$base-yellow: #E5DDA5;\n$base-gray: #B6BBBF;\n$base-black: #171515;\n$base-white: #FFFF;\n\n\n\nbody{\n    background-color: $base-background;\n}"],"names":[],"version":3,"file":"authorisation.924af56c.css.map","sourceRoot":"/__parcel_source_root/"}
