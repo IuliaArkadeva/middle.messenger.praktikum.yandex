@@ -1,11 +1,62 @@
-$base-background: #57855E;
-$base-yellow: #E5DDA5;
-$base-gray: #B6BBBF;
-$base-black: #171515;
-$base-white: #FFFF;
+
+@use './fonts/fonts';
+@use './variables';
+@use './mixins';
+@use './normalize';
+
+@import './fontawesome/scss/fontawesome.scss';
+@import './fontawesome/scss/solid.scss';
+
+html, body{
+    background-color: variables.$base-background;
+    font-family: fonts.$font-family;
+    box-sizing:content-box;
+    @include mixins.all-screen-area;
+    height: 100%;
+
+    *, *::before, *::after{
+        @include mixins.all-screen-area;
+    }
+
+    .container{
+        @include mixins.all-screen-area;
+        min-height: 60%;
+        display: flex;
+
+        .white-box_left{
+            @include mixins.white-area;
+            border-radius: 0 50px 50px 0;
+            position: relative;
+            max-width: 80vw;
+         
+            .white-box_left__image-decore{
+                @include mixins.decore-image;
+                top: 35%;
+                right: -5%;
+            }
+
+            .white-box_right__image-decore{
+                @include mixins.decore-image;
+                top: 35%;
+                left: -5%;
+            }
+
+        }
+    }
+
+    .conatiner_main{
+        align-items: center;
+    }
 
 
 
-body{
-    background-color: $base-background;
+    h1{
+         @include mixins.title;    
+    }
+
+    
+
+
+
+
 }

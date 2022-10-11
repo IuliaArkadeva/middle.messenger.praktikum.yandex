@@ -1,0 +1,29 @@
+@use './fontawesome/scss/mixins';
+@use './variables';
+
+@mixin title{
+    font-weight: 800;
+    font-size: 36px;
+    text-align: center;
+}
+
+@mixin white-area{
+    background-color: variables.$base-white;
+    border-radius: 50px;
+    padding: 60px 90px;
+}
+
+@mixin all-screen-area{
+    box-sizing:content-box;
+    margin:0;
+    padding: 0;
+}
+
+@mixin decore-image{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    height: 30%;
+    width: 10%;
+    position: absolute;
+}

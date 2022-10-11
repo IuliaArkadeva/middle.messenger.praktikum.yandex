@@ -1,0 +1,27 @@
+{{#with table-data}}
+    <div class="simple-form {{extra-classes}}">
+        {{#if h1-title}}
+            <h1>{{h1-title}}</h1>
+        {{else}}
+            <h3>{{form-title}}</h3>
+        {{/if}}
+        <form id="{{id}}" method="{{method}}">
+            {{#each inputs}}
+                <input type="{{type}}" name="{{name}}" value="{{value}}"/>
+            {{/each}}
+            <input type="submit" value="{{submit-text}}"/>
+            <div class="simple-form__extra-links-area">
+                {{#each extra-links}}
+                    <a href="{{href}}" id="{{id}}" class="{{extra-classes}}">{{text}}</a>
+                {{/each}}
+            </div>
+            <div class="simple-form__extra-text-area">
+                {{#each extra-texts}}
+                    <div class="simple-form__extra-text-area__text-item {{extra-classes}}">
+                        {{text}}
+                    </div>
+                {{/each}}
+            </div>
+        </form>
+    </div>
+{{/with}}
