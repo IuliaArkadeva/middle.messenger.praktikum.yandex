@@ -20,33 +20,62 @@ html, body{
 
     .container{
         @include mixins.all-screen-area;
-        min-height: 60%;
+        min-height: 100%;
         display: flex;
+        align-content: space-between;
 
-        .white-box_left{
+        .image-decore{
+            @include mixins.decore-image;
+        }
+
+        .white-box{
             @include mixins.white-area;
-            border-radius: 0 50px 50px 0;
             position: relative;
             max-width: 80vw;
-         
-            .white-box_left__image-decore{
-                @include mixins.decore-image;
+
+        }
+
+
+        .white-box_left{
+            border-radius: 0 50px 50px 0;
+            
+            .image-decore{
                 top: 35%;
                 right: -5%;
             }
+        }
 
-            .white-box_right__image-decore{
-                @include mixins.decore-image;
+        .white-box_right{
+            border-radius: 50px 0 0 50px;
+
+            .image-decore{
                 top: 35%;
                 left: -5%;
             }
-
         }
+
     }
 
-    .conatiner_main{
+    .container_left-hand{
+            justify-content: flex-start;
+            align-items: center;
+    }
+
+    .container_right-hand{
+        justify-content: flex-end;
         align-items: center;
     }
+
+    .container_middle{
+        justify-content:center;
+        align-items: center;
+    }
+
+    .container_middle-bottom{
+        justify-content:center;
+        align-items: flex-end;
+    }
+
 
 
 

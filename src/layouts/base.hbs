@@ -21,9 +21,6 @@
 
 {{#block "body"}}
   <body class="{{bodyclass}}">
-    {{!-- {{#block "header"}}
-    {{> header}}
-    {{/block}} --}}
 
     {{#block "main"}}
     {{/block}}
@@ -34,7 +31,7 @@
 
     {{#block "scripts"}}
     {{#each scripts}}
-    <script defer src="{{this}}"></script>
+    <script type="module" src="{{this}}"></script>
     {{/each}}
     {{/block}}
   </body>

@@ -1,0 +1,35 @@
+---
+alternates:
+  - language: es
+    uri: /es
+  - language: fr
+    uri: /fr
+bodyclass: index
+language: en
+meta:
+  author: Author Name
+  description: Some meta description
+  keywords: Some, Meta, Keywords
+  robots: index, follow
+scripts:
+  - ../index.js
+stylesheets:
+  - ../scss/style.scss
+title: Index | Parcel Bundler With Handlebars
+uri: /error.html
+error-code: 404
+error-description: page not found
+---
+
+
+{{#extend "base"}}
+    {{#content "main"}}
+        <div class="container">
+            <div class="error-container container_middle">
+                <h1>{{error-code}}</h1>
+                <h3>{{error-description}}</h3>
+            </div>
+            {{> components/simple/decore-image}}
+        </div>
+    {{/content}}
+{{/extend}}

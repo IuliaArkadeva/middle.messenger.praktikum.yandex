@@ -46,10 +46,15 @@ table-data:
 ---
 
 {{#extend "base"}}
+  
+  {{#block "header"}}
+    {{> header}}
+  {{/block}}
+
   {{#content "main"}}
     <div class="container container_left-hand">
       <div class="white-box white-box_left">
-        {{> components/composite/simple-form}}
+        {{!-- {{> components/composite/simple-form}} --}}
         {{> components/simple/decore-image}} 
       </div>
     </div>

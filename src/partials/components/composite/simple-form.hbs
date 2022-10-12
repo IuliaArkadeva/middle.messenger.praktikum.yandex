@@ -5,25 +5,23 @@
         {{else}}
             <h3>{{form-title}}</h3>
         {{/if}}
-        <form id="{{id}}" method="{{method}}">
+        <form id="{{id}}">
             {{#each columns}}
                 <div class="simple-form__column">
                     {{#each inputs}}
-                        <input type="{{type}}" name="{{name}}" value="{{value}}"/>
+                        {{> components/simple/text-input type=type name=name palceholder=palceholder}}
                     {{/each}}
                 </div>
             {{/each}}
-            <input type="submit" value="{{submit-text}}"/>
+            {{> components/simple/button submit="true" submit-text=submit-text}}
             <div class="simple-form__extra-links-area">
                 {{#each extra-links}}
-                    <a href="{{href}}" id="{{id}}" class="{{extra-classes}}">{{text}}</a>
+                    {{> components/simple/link href=href id=id extra-classes=extra-classes text=text}}
                 {{/each}}
             </div>
             <div class="simple-form__extra-text-area">
                 {{#each extra-texts}}
-                    <div class="simple-form__extra-text-area__text-item {{extra-classes}}">
-                        {{text}}
-                    </div>
+                    {{> components/simple/text-line text=text extra-classes=extra-classes}}
                 {{/each}}
             </div>
         </form>
