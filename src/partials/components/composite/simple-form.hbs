@@ -6,8 +6,12 @@
             <h3>{{form-title}}</h3>
         {{/if}}
         <form id="{{id}}" method="{{method}}">
-            {{#each inputs}}
-                <input type="{{type}}" name="{{name}}" value="{{value}}"/>
+            {{#each columns}}
+                <div class="simple-form__column">
+                    {{#each inputs}}
+                        <input type="{{type}}" name="{{name}}" value="{{value}}"/>
+                    {{/each}}
+                </div>
             {{/each}}
             <input type="submit" value="{{submit-text}}"/>
             <div class="simple-form__extra-links-area">

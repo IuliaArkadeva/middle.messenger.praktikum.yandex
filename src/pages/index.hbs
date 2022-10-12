@@ -24,14 +24,15 @@ table-data:
   h1-title: Authorisation
   id: authorisation-form
   method: POST
-  extra-classes: 
-  inputs:
-    - type: text
-      name: login
-      value: login
-    - type: text
-      name: password
-      value: password
+  extra-classes:
+  columns:
+    - inputs:
+      - type: text
+        name: login
+        value: login
+      - type: text
+        name: password
+        value: password
   submit-text: Enter
   extra-links:
     - href: ./registartion
@@ -48,8 +49,8 @@ table-data:
   {{#content "main"}}
     <div class="container conatiner_main">
       <div class="white-box_left">
-        {{> components/simple-form}}
-        {{> components/decore-image}} 
+        {{> components/composite/simple-form}}
+        {{> components/simple/decore-image}} 
       </div>
     </div>
   {{/content}}
