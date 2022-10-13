@@ -1,30 +1,51 @@
-/*
-    TEMPORARY FOR TESTS
-    TODO: raznesty po componentam i sdelat sborshik
-    TODO: decore image generator
-*/
+//Utils
+import './scss/style.scss';
 
-/*==============Random image generator============*/
-let decore_image = document.querySelector(".image-decore");
-if(typeof decore_image!== "undefined" && decore_image){
-    const image_number = Math.floor(Math.random()*(2-1) + 1);
-    decore_image.setAttribute('style', `background-image: url(decore-img-${image_number}.min.png)`)
-    
+import loader from './utils/rootloader';
+
+//temps
+import authorisation from './pages/index.hbs';
+import simpleForm from './partials/components/composite/simpleForm/index.js';
+
+const data = {
+	table_data: {
+        h1_title: 'Authorisation',
+        id: 'authorisation-form',
+        method: 'POST',
+        columns: [
+            {
+                inputs: [
+                    {
+                        type: 'text',
+                        name: 'login',
+                        palceholder: 'login',
+                    },
+                    {
+                        type: 'password',
+                        name: 'login',
+                        palceholder: 'login',
+                    },
+                ]
+            }                
+        ],
+        submit_text: "Enter",
+        extra_links: [
+            {
+                href: '/src/pages/registration.html',
+                text: 'Create accaunt'
+            }
+        ],
+        extra_texts:[
+            {
+                extra_classes: 'simple-sign_warinig',
+                text: 'Login or password is wrong' 
+            }
+        ]
+
+    }
 }
-//replace to express on start
-/*================== END ==================*/
+  
 
-let login_form = document.getElementById('authorisation-form'),
-register_form = document.getElementById('signup-form');
+console.log(authorisation(data));
 
-
-if(login_form && typeof login_form !== "undefined"){
-    login_form.action = './chatlist.html';
-}
-
-
-if(register_form && typeof register_form !== "undefined"){
-    register_form.action = './chatlist.html';    
-}
-
-
+loader(authorisation, data);

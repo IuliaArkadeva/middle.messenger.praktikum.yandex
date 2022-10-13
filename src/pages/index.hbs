@@ -1,57 +1,6 @@
----
-alternates:
-  - language: es
-    uri: /es
-  - language: fr
-    uri: /fr
-bodyclass: index
-language: en
-meta:
-  author: Author Name
-  description: Some meta description
-  keywords: Some, Meta, Keywords
-  robots: index, follow
-scripts:
-  - ../index.js
-stylesheets:
-  - ../scss/style.scss
-title: Index | Parcel Bundler With Handlebars
-uri: /
-decore-image:
-  class-name: white-box_left__image-decore
-  image-url: /static/images/decore-img-1.min.png
-table-data:
-  h1-title: Authorisation
-  id: authorisation-form
-  method: POST
-  extra-classes:
-  columns:
-    - inputs:
-      - type: text
-        name: login
-        palceholder: login
-      - type: text
-        name: password
-        palceholder: password
-  submit-text: Enter
-  extra-links:
-    - href: /src/pages/registration.hbs
-      id: 
-      extra-classes:
-      text: Sign Up
-  extra-texts:
-    - extra-classes: simple-sign_warinig
-      text: Login or password is wrong
-
----
-
-{{#extend "base"}}
-  {{#content "main"}}
-    <div class="container container_left-hand">
-      <div class="white-box white-box_left">
-        {{> components/composite/simple-form}}
-        {{> components/simple/decore-image}} 
-      </div>
-    </div>
-  {{/content}}
-{{/extend}}
+<div class="container container_left-hand">
+  <div class="white-box white-box_left">
+    {{> SimpleForm}}
+    {{!-- {{> decore-image}}  --}}
+  </div>
+</div>
