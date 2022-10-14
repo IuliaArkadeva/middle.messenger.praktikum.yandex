@@ -1,27 +1,27 @@
-{{#with table-data}}
-    <div class="simple-form {{extra-classes}}">
-        {{#if h1-title}}
-            <h1>{{h1-title}}</h1>
+{{#with table_data}}
+    <div class="simple-form {{extra_classes}}">
+        {{#if h1_title}}
+            <h1>{{h1_title}}</h1>
         {{else}}
-            <h3>{{form-title}}</h3>
+            <h3>{{form_title}}</h3>
         {{/if}}
         <form id="{{id}}">
             {{#each columns}}
                 <div class="simple-form__column">
                     {{#each inputs}}
-                        {{> components/simple/text-input type=type name=name palceholder=palceholder}}
+                        {{> textInput type=type name=name palceholder=palceholder}}
                     {{/each}}
                 </div>
             {{/each}}
-            {{> components/simple/button submit="true" submit-text=submit-text}}
+            {{> button submit="true" submit_text=submit_text}}
             <div class="simple-form__extra-links-area">
-                {{#each extra-links}}
-                    {{> components/simple/link href=href id=id extra-classes=extra-classes text=text}}
+                {{#each extra_links}}
+                    {{> link href=href id=id extra_classes=extra_classes text=text}}
                 {{/each}}
             </div>
             <div class="simple-form__extra-text-area">
-                {{#each extra-texts}}
-                    {{> components/simple/text-line text=text extra-classes=extra-classes}}
+                {{#each extra_texts}}
+                    {{> textLine text=text extra-classes=extra_classes}}
                 {{/each}}
             </div>
         </form>

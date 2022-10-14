@@ -5,7 +5,13 @@ import loader from './utils/rootloader';
 
 //temps
 import authorisation from './pages/index.hbs';
+
 import simpleForm from './partials/components/composite/simpleForm/index.js';
+import button from './partials/components/simple/button/index.js';
+import button from './partials/components/simple/textInput/index.js';
+import button from './partials/components/simple/link/index.js';
+import button from './partials/components/simple/textLine/index.js';
+
 
 const data = {
 	table_data: {
@@ -31,7 +37,7 @@ const data = {
         submit_text: "Enter",
         extra_links: [
             {
-                href: '/src/pages/registration.html',
+                href: '/registration',
                 text: 'Create accaunt'
             }
         ],
