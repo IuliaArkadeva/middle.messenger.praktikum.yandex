@@ -1,0 +1,23 @@
+[
+    {
+        "id": 2,
+        "name": {
+            "first_name": "Din",
+            "second_name": "Thompson"
+        },
+        "avatar": {
+            "url": "avatar2.jpeg"
+        }
+    },
+    {
+        "id": 3,
+        "name": {
+            "first_name": "Fred",
+            "second_name": "Johnson"
+        },
+        "avatar": {
+            "url": "avatar3.jpeg"
+        }
+    }
+
+]

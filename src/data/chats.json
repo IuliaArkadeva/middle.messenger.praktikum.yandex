@@ -1,0 +1,25 @@
+[
+    {
+        "interview_id": 2,
+        "messeges": [
+            {
+                "text": "Message one",
+                "isMy": true,
+                "data": "19:00 15.10",
+                "attachment": [
+                    {
+                        "type": "file",
+                        "url": "file_1",
+                        "extension": "xlsx"
+                    }
+                ]
+            },
+            {
+                "text": "Message two",
+                "isMy": true,
+                "data": "19:02 15.10",
+                "attachment": []
+            }
+        ]
+    }
+]

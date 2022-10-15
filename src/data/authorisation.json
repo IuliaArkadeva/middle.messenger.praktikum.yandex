@@ -1,0 +1,37 @@
+{
+    "table_data": {
+        "h1_title": "Authorisation",
+        "id": "authorisation-form",
+        "method": "POST",
+        "columns": [
+            {
+                "inputs": [
+                    {
+                        "type": "text",
+                        "name": "login",
+                        "palceholder": "login"
+                    },
+                    {
+                        "type": "password",
+                        "name": "login",
+                        "palceholder": "login"
+                    }
+                ]
+            }
+        ],
+        "submit_text": "Enter",
+        "extra_links": [
+            {
+                "href": "/registration",
+                "text": "Create accaunt"
+            }
+        ],
+        "extra_texts": [
+            {
+                "extra_classes": "simple-sign_warinig",
+                "text": "Login or password is wrong"
+            }
+        ]
+
+    }
+}

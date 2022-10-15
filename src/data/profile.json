@@ -1,0 +1,17 @@
+{
+"user":{
+    "id": 1,
+    "login": "alice.cooper",
+    "name": {
+        "first_name": "Alice",
+        "second_name": "Cooper"
+    },
+    "email": "alice.cooper@yandex.ru",
+    "phone": "+8948576939486",
+    "password": "123456",
+    "avatar": {
+        "url": "avatar1.jpeg"
+    }
+},
+"editMode": false
+}

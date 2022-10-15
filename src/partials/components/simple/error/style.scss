@@ -1,0 +1,21 @@
+@use '../../../../scss/variables';
+
+.container-error-area{
+    align-content: center !important;
+    align-items: center;
+    justify-content: center;
+
+    .error-item{
+        color: variables.$base-yellow;
+        .small_text{
+            line-height: 40px;
+            font-weight: 400;
+            font-size: 32px;
+        }
+
+        h1{
+            font-size: 128px !important;
+            font-weight: 800 !important;
+        }
+    }    
+}

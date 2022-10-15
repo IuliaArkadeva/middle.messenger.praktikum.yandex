@@ -1,57 +1,48 @@
-//Utils
+//styles
 import './scss/style.scss';
 
-import loader from './utils/rootloader';
+//Utils
+import rootloader from './utils/rootloader';
+import Route from './utils/routing/route';
+import Router from './utils/routing/router';
+import locationHandler from './utils/routing/locationHandler';
+//pages
+import authorisation from './pages/authorisation/';
+import registration from './pages/registration/';
+import chats from './pages/chats/';
+import error from './pages/error/';
+import profile from './pages/profile/';
 
-//temps
-import authorisation from './pages/index.hbs';
 
-import simpleForm from './partials/components/composite/simpleForm/index.js';
-import button from './partials/components/simple/button/index.js';
-import button from './partials/components/simple/textInput/index.js';
-import button from './partials/components/simple/link/index.js';
-import button from './partials/components/simple/textLine/index.js';
+//json
+/*
+    Temporaray dessidion for first sprint (without db)
+*/
+import indexData from './data/authorisation.json'
+import error404 from './data/404.json';
+import error505 from './data/505.json';
+import registrationData from './data/registration.json';
+import profileData from './data/profile.json';
+const profilrEditMode = profileData;
+profilrEditMode.editMode = true;
+import chatsData from './data/chats.json';
 
 
-const data = {
-	table_data: {
-        h1_title: 'Authorisation',
-        id: 'authorisation-form',
-        method: 'POST',
-        columns: [
-            {
-                inputs: [
-                    {
-                        type: 'text',
-                        name: 'login',
-                        palceholder: 'login',
-                    },
-                    {
-                        type: 'password',
-                        name: 'login',
-                        palceholder: 'login',
-                    },
-                ]
-            }                
-        ],
-        submit_text: "Enter",
-        extra_links: [
-            {
-                href: '/registration',
-                text: 'Create accaunt'
-            }
-        ],
-        extra_texts:[
-            {
-                extra_classes: 'simple-sign_warinig',
-                text: 'Login or password is wrong' 
-            }
-        ]
 
-    }
+const rootElement = document.getElementById('root');
+
+const init = function () {
+    var routes = new Router([
+        new Route('home', authorisation, indexData, true),
+        new Route('registration', registration, registrationData),
+        new Route('chats', chats, chatsData),
+        new Route('profile', profile, profileData),
+        new Route('profile/edit', profile, profilrEditMode),
+        new Route('404', error, error404),
+        new Route('505', error, error505)
+
+    ], rootElement);
+    window.onpopstate = locationHandler(routes.routes, rootElement);
 }
-  
+init();
 
-console.log(authorisation(data));
-
-loader(authorisation, data);

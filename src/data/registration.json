@@ -1,0 +1,59 @@
+{
+    "table_data": {
+        "h1_title": "Registration",
+        "id": "signup_form",
+        "method": "POST",
+        "extra_classes": "",
+        "columns": [
+            {
+                "inputs": [
+                    {
+                        "type": "text",
+                        "name": "first_name",
+                        "placeholder": "first name"
+                    }, {
+                        "type": "text",
+                        "name": "second_name",
+                        "placeholder": "second name"
+                    }, {
+                        "type": "text",
+                        "name": "login",
+                        "placeholder": "login"
+                    },
+                    {
+                        "type": "text",
+                        "name": "email",
+                        "placeholder": "email"
+                    }
+                ]
+            },
+            {
+                "inputs": [
+                    {
+                        "type": "text",
+                        "name": "phone",
+                        "placeholder": "phone"
+                    }, {
+                        "type": "text",
+                        "name": "password",
+                        "placeholder": "password"
+                    }, {
+                        "type": "text",
+                        "name": "repeat_password",
+                        "placeholder": "repeat password"
+                    }
+                ]
+            }
+        ],
+        "submit_text": "Sign Up",
+        "extra_links": {
+            "href": "/",
+            "text": "Enter"
+        },
+        "extra_texts": {
+            "extra_classes": "simple-sign_warinig",
+            "text": "Login or password is wrong"
+        }
+
+    }
+}

@@ -1,9 +1,9 @@
-function Route(url, tempName, defaultRoute){
+function Route(url, tempName, params={}, defaultRoute = false){
     try{
-        if(!url || !tempName){
+        if(!url && !defaultRoute || !tempName){
             throw new Error('initiled route is not correct. url or template name is missing.');
         }
-        this.constructor(url, tempName, defaultRoute);
+        this.constructor(url, tempName, params, defaultRoute);
     }catch(e){
         console.log(e);
     }
@@ -11,15 +11,17 @@ function Route(url, tempName, defaultRoute){
 
 Route.prototype = {
     url : undefined,
-    tempName: undefined,
+    tempFunc: undefined,
+    params : undefined,
     isDefault: undefined,
-    constructor: (url, tempName, isDefault)=>{
+     constructor: function(url, tempFunc, params = {}, isDefault){
         this.url = url;
-        this.tempName = tempName;
+        this.params = params,
+        this.tempFunc = tempFunc;
         this.isDefault = isDefault;
     },
-    activated: (locationHash)=>{
-        return locationHash == url;
+    activated: function(locationHash){
+        return locationHash == this.url.replace('#', '');
     }
 }
 

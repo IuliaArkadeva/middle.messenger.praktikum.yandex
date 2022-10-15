@@ -1,0 +1,10 @@
+@use '../../../scss/variables';
+
+header{
+    padding: 25px 100px;
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    color: variables.$base-white;
+    height: max-content;
+}
