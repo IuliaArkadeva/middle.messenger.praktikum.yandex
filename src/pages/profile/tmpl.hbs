@@ -1,9 +1,9 @@
 <div class="container container_middle-bottom container_user-profile">
     {{> header}}
     <div class="white-box">
-     {{!-- {{#if editMode}} --}}
+     {{#if editMode}}
         {{> simpleForm table_data=table_data}}
-    {{!-- {{else}}
+    {{else}}
         <div class="static-lines_container">
             {{#with user}}
             {{> textLine text=login}}
@@ -24,6 +24,6 @@
             {{> button submit_text="Edit" id="edit-profile"}}
             {{> link text="Change password" id="change-password"}}
         </div>
-    {{/if}} --}}
+    {{/if}}
     </div>
 </div>
