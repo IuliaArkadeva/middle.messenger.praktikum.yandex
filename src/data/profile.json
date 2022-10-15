@@ -1,17 +1,94 @@
 {
-"user":{
-    "id": 1,
-    "login": "alice.cooper",
-    "name": {
-        "first_name": "Alice",
-        "second_name": "Cooper"
+    "user": {
+        "id": 1,
+        "login": "alice.cooper",
+        "name": {
+            "first_name": "Alice",
+            "second_name": "Cooper"
+        },
+        "email": "alice.cooper@yandex.ru",
+        "phone": "+8948576939486",
+        "display_name": true,
+        "password": "123456",
+        "avatar":  "avatar_1.png"
     },
-    "email": "alice.cooper@yandex.ru",
-    "phone": "+8948576939486",
-    "password": "123456",
-    "avatar": {
-        "url": "avatar1.jpeg"
-    }
-},
-"editMode": false
+        "table_data": {
+            "id": "edit-profile",
+            "method": "POST",
+            "columns": [
+                {
+                    "inputs": [
+                        {
+                            "type": "text",
+                            "name": "first_name",
+                            "placeholder": "first name",
+                            "value": "Alice"
+                        },
+                        {
+                            "type": "text",
+                            "name": "second_name",
+                            "placeholder": "second name",
+                            "value": "Cooper"
+                        },
+                        {
+                            "type": "checkbox",
+                            "name": "display_name",
+                            "placeholder": "dispaly name"  
+                            
+                        },
+                        {
+                            "type": "text",
+                            "name": "login",
+                            "placeholder": "login",
+                            "value": "alice.cooper"
+                        },
+                        {
+                            "type": "text",
+                            "name": "email",
+                            "placeholder": "email",
+                            "value": "alice.cooper@yandex.ru"
+                        },
+                        {
+                            "type": "text",
+                            "name": "phone",
+                            "placeholder": "phone",
+                            "value": "phone"
+                        },
+                        {
+                            "type": "text",
+                            "name": "oldPassword",
+                            "placeholder": "password",
+                            "extra_option": "autocomplete='on'" 
+                        },
+                        {
+                            "type": "text",
+                            "name": "newPassword",
+                            "placeholder": "repeat password"
+                        }
+                    ]
+                }, {
+                    "inputs":[
+                        {
+                            "type": "file",
+                            "name": "avatar"
+                        }
+                    ]
+                }
+            ],
+            "submit_text": "Enter",
+            "extra_links": [
+                {
+                    "href": "/registration",
+                    "text": "Create accaunt"
+                }
+            ],
+            "extra_texts": [
+                {
+                    "extra_classes": "simple-sign_warinig",
+                    "text": "Login or password is wrong"
+                }
+            ]
+        },
+    
+    "editMode": false
 }

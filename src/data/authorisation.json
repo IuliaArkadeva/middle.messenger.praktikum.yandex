@@ -9,12 +9,13 @@
                     {
                         "type": "text",
                         "name": "login",
-                        "palceholder": "login"
+                        "placeholder": "login"
                     },
                     {
                         "type": "password",
-                        "name": "login",
-                        "palceholder": "login"
+                        "name": "password",
+                        "placeholder": "password",
+                        "extra_option": "autocomplete='on'"
                     }
                 ]
             }

@@ -29,14 +29,15 @@ body {
             min-height: 100%;
             display: flex;
             align-content: space-between;
+            flex-wrap: wrap;
 
-            .image-decore {
-                @include mixins.decore-image;
-            }
+    
 
             .white-box {
                 @include mixins.white-area;
                 position: relative;
+                min-width: 60vw;
+                min-height: 60vh;
                 max-width: 80vw;
 
             }
@@ -65,11 +66,20 @@ body {
         .container_left-hand {
             justify-content: flex-start;
             align-items: center;
+
+            .white-box{
+                justify-content: right;
+            }
+            
         }
 
         .container_right-hand {
             justify-content: flex-end;
             align-items: center;
+
+            .white-box{
+                justify-content: left;
+            }
         }
 
         .container_middle {

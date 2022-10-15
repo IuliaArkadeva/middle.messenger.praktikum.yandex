@@ -1,10 +1,10 @@
 import loader from '../rootloader';
 import authorisation from '../../pages/authorisation';
-import deleteslashinthend from '../deleteslashinthend';
-import deleteslashinstart from '../deleteslashinstart';
+import deleteSlashInEnd from '../deleteslashinthend';
+import deleteSlashInStart from '../deleteslashinstart';
 
 const locationHandler = async (routes, rootElement) => {
-    const location = deleteslashinthend(deleteslashinstart(window.location.pathname));
+    const location = deleteSlashInEnd(deleteSlashInStart(window.location.pathname));
     console.log(location)
 
     let route = routes.find(r => r.activated(location));

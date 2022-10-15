@@ -23,21 +23,24 @@ import error404 from './data/404.json';
 import error505 from './data/505.json';
 import registrationData from './data/registration.json';
 import profileData from './data/profile.json';
-const profilrEditMode = profileData;
-profilrEditMode.editMode = true;
+import profilrEditMode from './data/profile.json';
+//delete profilrEditMode.editMode;
 import chatsData from './data/chats.json';
 
 
 
 const rootElement = document.getElementById('root');
 
+console.log(profileData);
+console.log(profileData);
+
 const init = function () {
     var routes = new Router([
         new Route('home', authorisation, indexData, true),
         new Route('registration', registration, registrationData),
         new Route('chats', chats, chatsData),
-        new Route('profile', profile, profileData),
-        new Route('profile/edit', profile, profilrEditMode),
+        new Route('profile', profile, profilrEditMode),
+        new Route('profile/edit', profile, profileData),
         new Route('404', error, error404),
         new Route('505', error, error505)
 

@@ -1,7 +1,29 @@
-
-<div class="container container_middle-bottom">
-{{> header}}
-<div class="white-box">
-
-</div>
+<div class="container container_middle-bottom container_user-profile">
+    {{> header}}
+    <div class="white-box">
+     {{!-- {{#if editMode}} --}}
+        {{> simpleForm table_data=table_data}}
+    {{!-- {{else}}
+        <div class="static-lines_container">
+            {{#with user}}
+            {{> textLine text=login}}
+            {{#with name}}
+            {{> textLine text=first_name}}
+            {{> textLine text=second_name}}
+            {{/with}}
+            {{> textLine text=email}}
+            {{> textLine text=phone}}
+            {{/with}}
+        </div>
+        <div class="static-objects__container">
+            {{#with user}}
+            <div class="static-objects__avatar-container"
+                style="background-image:url(../../../static/images/avatars/avatar_1.png)">
+            </div>
+            {{/with}}
+            {{> button submit_text="Edit" id="edit-profile"}}
+            {{> link text="Change password" id="change-password"}}
+        </div>
+    {{/if}} --}}
+    </div>
 </div>

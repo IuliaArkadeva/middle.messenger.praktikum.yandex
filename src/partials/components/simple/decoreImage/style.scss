@@ -1,3 +1,5 @@
-.button{
-    background-color: aqua;
+@use '../../../../scss/mixins';
+
+.image-decore {
+    @include mixins.decore-image;
 }
