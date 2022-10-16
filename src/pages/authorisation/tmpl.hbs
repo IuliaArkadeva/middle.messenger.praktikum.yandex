@@ -4,5 +4,10 @@
     {{> simpleForm teble_data=table_data}}
     {{!-- {{> decore-image}}  --}}
   </div>
-  {{> emptyArea}}
+  {{#if editMode}}
+
+  {{else}}
+    {{> simpleForm }}
+  {{/}}
+
 </div>
