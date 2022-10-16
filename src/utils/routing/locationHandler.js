@@ -1,5 +1,4 @@
 import loader from '../rootloader';
-import authorisation from '../../pages/authorisation';
 import deleteSlashInEnd from '../deleteslashinthend';
 import deleteSlashInStart from '../deleteslashinstart';
 
