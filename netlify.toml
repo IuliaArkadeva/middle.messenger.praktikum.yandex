@@ -12,8 +12,3 @@
 from = "/home"
 to = "/"
 status = 301
-
-[[redirects]]
-from = "/registration"
-to = "/"
-status = 301
