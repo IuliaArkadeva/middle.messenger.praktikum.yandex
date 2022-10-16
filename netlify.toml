@@ -9,6 +9,6 @@
   publish = "dist" 
 
 [[redirects]]
-from = "/home"
-to = "/"
+from = "/*"
+to = "/index.html"
 status = 301
