@@ -12078,7 +12078,14 @@ const templateFunction = (0, _handlebarsDefault.default).template({
             "helpers": helpers,
             "partials": partials,
             "decorators": container.decorators
-        })) != null ? stack1 : "") + "  </div>\n</div>";
+        })) != null ? stack1 : "") + "  </div>\n" + ((stack1 = container.invokePartial(lookupProperty(partials, "emptyArea"), depth0, {
+            "name": "emptyArea",
+            "data": data,
+            "indent": "  ",
+            "helpers": helpers,
+            "partials": partials,
+            "decorators": container.decorators
+        })) != null ? stack1 : "") + "</div>";
     },
     "usePartial": true,
     "useData": true
