@@ -10,5 +10,5 @@
 
 [[redirects]]
 from = "/registration"
-to = "/registration"
+to = "/*"
 status = 301
