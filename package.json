@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "parcel build src/*.html",
-    "start": "node ./server.js",
+    "start": "npm run build && node ./server.js",
     "start:parcel": "parcel ./src/*.html --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "push-dir --dir=dist --branch=deploy"
