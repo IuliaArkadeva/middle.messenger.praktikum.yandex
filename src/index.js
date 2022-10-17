@@ -2,17 +2,17 @@
 import './scss/style.scss';
 
 //Utils
-import rootloader from './utils/rootloader';
-import Route from './utils/routing/route';
-import Router from './utils/routing/router';
-import locationHandler from './utils/routing/locationHandler';
+import rootloader from './utils/rootloader.js';
+import Route from './utils/routing/route.js';
+import Router from './utils/routing/router.js';
+import locationHandler from './utils/routing/locationHandler.js';
 //pages
-import authorisation from './pages/authorisation/';
-import registration from './pages/registration/';
-import chats from './pages/chats/';
-import error from './pages/error/';
-import profile from './pages/profile/';
-import profileEdit from './pages/profileEdit/';
+import authorisation from './pages/authorisation/index.js';
+import registration from './pages/registration/index.js';
+import chats from './pages/chats/index.js';
+import error from './pages/error/index.js';
+import profile from './pages/profile/index.js';
+import profileEdit from './pages/profileEdit/index.js';
 
 
 //json
