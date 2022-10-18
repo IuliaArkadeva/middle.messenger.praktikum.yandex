@@ -8,5 +8,5 @@
 
 [[redirects]]
 from = "/registration"
-to = "/index.html"
+to = "/registration/"
 status = 301
